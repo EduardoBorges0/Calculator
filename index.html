@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>calculadora</title>
+  <link rel="stylesheet" href="style.css">
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <main id="main">
+    
+    <form name="calculator">
+      <input type="text" name="calcular" id="result"  disabled>
+        <div class="numbers">
+          <button type="button" value="DEL" id= 'delete'><span class="insideButton"><i class="fa-solid fa-delete-left"></i></span></button>
+          <button type="button" value="C" id="deleteAll"><span class="insideButton">C</span></button>
+        </div>
+        <div class="numbers">
+          <button type="button" value="7" onclick="insert(7)" class="number"><span class="insideButton">7</span></button>
+          <button type="button" value="8" onclick="insert(8)" class="number"><span class="insideButton">8</span></button>
+          <button type="button" value="9" onclick="insert(9)" class="number"><span class="insideButton">9</span></button>
+
+        </div>
+        <div class="numbers">
+          <button type="button" value="4" onclick="insert(4)" class="number"><span class="insideButton">4</span></button>
+          <button type="button" value="5" onclick="insert(5)" class="number"><span class="insideButton">5</span></button>
+          <button type="button" value="6" onclick= 'insert(6)' class="number"><span class="insideButton">6</span></button>
+       
+        </div>
+        <div class="numbers">
+          <button type="button" value="1" onclick = 'insert(1)' class="number"><span class="insideButton">1</span></button>
+          <button type="button" value="2" onclick="insert(2)" class="number"><span class="insideButton">2</span></button>
+          <button type="button" value="3" onclick="insert(3)"class="number"><span class="insideButton">3</span></button>
+        
+       </div>
+       <div id="operationDiv">
+          <button type="button" value="/" onclick="insert('/')" class="operation"><span class="insideButton">/</span></button>
+          <button type="button" value="x" onclick="insert('*')" class="operation"><span class="insideButton">x</span></button>
+          <button type="button" value="-" onclick="insert('-')" class="operation"><span class="insideButton">-</span></button>
+          <button type="button" value="=" onclick="calcular.value = eval(calcular.value).toFixed(2)" class="operation equal"><span class="insideButton">=</span></button>
+       </div>
+     
+    </form>
+
+  </main>
+</body>
+</html>
